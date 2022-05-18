@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "./static/css/main.8c44be67.chunk.css",
+    "main.js": "./static/js/main.ca74a89f.chunk.js",
+    "main.js.map": "./static/js/main.ca74a89f.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.8b0ae790.js",
+    "runtime-main.js.map": "./static/js/runtime-main.8b0ae790.js.map",
+    "static/css/2.fbb5b0ef.chunk.css": "./static/css/2.fbb5b0ef.chunk.css",
+    "static/js/2.c3f22337.chunk.js": "./static/js/2.c3f22337.chunk.js",
+    "static/js/2.c3f22337.chunk.js.map": "./static/js/2.c3f22337.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.d89876f1d06b0912edba3090e34a299e.js": "./precache-manifest.d89876f1d06b0912edba3090e34a299e.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.fbb5b0ef.chunk.css.map": "./static/css/2.fbb5b0ef.chunk.css.map",
+    "static/css/main.8c44be67.chunk.css.map": "./static/css/main.8c44be67.chunk.css.map",
+    "static/js/2.c3f22337.chunk.js.LICENSE.txt": "./static/js/2.c3f22337.chunk.js.LICENSE.txt",
+    "static/media/BrooksAndel-pc-1.png": "./static/media/BrooksAndel-pc-1.a1800a66.png",
+    "static/media/brooks-andell-mobile-landscape.png": "./static/media/brooks-andell-mobile-landscape.c24ea25e.png",
+    "static/media/brooks-andell-mobile-potrait.png": "./static/media/brooks-andell-mobile-potrait.068b6ae6.png",
+    "static/media/challenge-banner-pc.png": "./static/media/challenge-banner-pc.ecacc39d.png",
+    "static/media/engineering-services.png": "./static/media/engineering-services.04e008cc.png",
+    "static/media/kewpump-banner-mobile-potrait.png": "./static/media/kewpump-banner-mobile-potrait.a52a4e30.png",
+    "static/media/kewpump-banner-pc.png": "./static/media/kewpump-banner-pc.191c2173.png",
+    "static/media/ks-series-mobile-landscape.png": "./static/media/ks-series-mobile-landscape.a739bfc7.png",
+    "static/media/office.png": "./static/media/office.97bcca4d.png",
+    "static/media/pump-repair.png": "./static/media/pump-repair.66656ff8.png",
+    "static/media/quality.png": "./static/media/quality.ea3378ba.png",
+    "static/media/replacement-parts.png": "./static/media/replacement-parts.b3451349.png",
+    "static/media/slick-theme.css": "./static/media/slick.f97e3bbf.svg",
+    "static/media/whatsapp.png": "./static/media/whatsapp.6efa24e3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8b0ae790.js",
+    "static/css/2.fbb5b0ef.chunk.css",
+    "static/js/2.c3f22337.chunk.js",
+    "static/css/main.8c44be67.chunk.css",
+    "static/js/main.ca74a89f.chunk.js"
+  ]
+}

@@ -1,0 +1,296 @@
+
+.table-partner-list{
+    margin: 10px 0px;
+}   
+
+
+.banner-side{
+    width:100%;
+    height:auto;
+    overflow:hidden ;
+}
+
+
+li{
+    list-style: none;
+}
+.whatsapp-icon-head{
+    width:180px;
+    height:100px;
+}
+.navbar-top-padding {
+    padding:0px 10px;
+}
+.card-home1{
+    background-color: #183346;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:5px 0px;
+    justify-content: center;
+    font-weight: bold;
+}
+.card-home1 h3{
+    color:#fff;
+}
+.card-home1-item img{
+    opacity: 0.5;
+    width:6em;
+    height: 6em;
+}
+.card-home1-item{
+    padding:10px;
+    width:147px;
+    height:150px;
+background: #FFFFFF;
+box-shadow: 1px 4px 8px rgba(18, 7, 7, 0.5);
+border-radius: 5px;
+cursor: pointer;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.card-home1-item:hover{
+    box-shadow: 1px 4px 8px 2px rgba(175, 85, 85, 0.5);
+}
+.card-home1-st{
+    color: #025955;
+    font-weight: bold;
+    font-size:14px;
+   text-align: center;
+}
+
+
+.card-home2{
+    margin:20px 0px;
+}
+.card-home2-margin{
+    margin-left:80px;
+    margin-right:80px;
+}
+.card-home2-item{
+    width: 220px;
+    height: 250.36px;
+    background: #FFFFFF;
+    box-shadow: 1px 4px 8px rgba(18, 7, 7, 0.5);
+    border-radius: 5px;
+    margin-top:30px;
+    margin-bottom: 30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  
+     padding-top:20px; 
+}
+.card-home2-item-img{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    height:80px;
+    margin-bottom: 10px;
+}
+.card-home2-item-img img{
+    width:80px;
+    height:80px;
+
+}
+.card-home2-item-t1{
+    font-size:18px;
+    text-align: center;
+    color:black;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card-home2-item-t2{
+    font-size:12px;
+    text-align: center;
+    color:#13a2b7;
+    height:50px;
+    padding-left:5px;
+    padding-right: 5px;
+}
+
+.card-home3{
+    background-color: #A83B3B;
+    display:flex;
+    flex-direction: column;
+    
+}
+.card-home3-item{
+    width: 230px;
+    border-radius: 50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.card-home3-item-1{
+    background-image: url('../img/Corporate/replacement-parts.png') ;
+    background-repeat:no-repeat;
+}
+.card-home4{
+    width:100%;
+    height:70px;
+    margin-top: -20px;
+    padding:20px 30px;
+    background: linear-gradient(90.75deg, rgba(91, 143, 191, 0.09) 0%, rgba(241, 234, 243, 0.9) 100%);
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+}
+.card-home4-t1{
+    font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 29px;
+text-align: center;
+color: #A54C4C;
+
+}
+.card-home4-iwrap{
+    display:flex;
+    flex-direction: column;
+}
+.banner-side img{
+    width:100%;
+    height:500px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .card-home2-margin{
+        margin:30px 10px;
+    }
+    .card-home1-item{
+        width: 139px;
+        height: 180px;
+        padding:0px;
+        background: #FFFFFF;
+        box-shadow: 1px 4px 8px rgba(18, 7, 7, 0.5);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .offcanvas-menu-wrapper, .active a {
+        color:black !important;
+    }
+    .navbar-top-padding {
+        padding:0px 10px;
+    }
+}
+@media (min-width: 320px) and (max-width: 767.98px) {
+    .navbar-top-padding {
+        padding:0px 0px;
+    }
+    .card-home3-item{
+     
+     
+        border-radius: 50%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    
+        
+    }
+    .offcanvas-menu-wrapper, .active a {
+        color:black !important;
+    }
+    
+    .card-home3-item img{
+        width:80px;
+        height:80px;
+    }
+    
+    .card-home2-item-img{
+     
+        height:50px;  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+    }
+    .card-home2-item-img img{
+        width:80px;
+        height:80px;
+    
+    }
+    .card-home4{
+        padding:20px 30px;
+        background-color: #FEF8F8;
+        display:flex; 
+        align-items:  center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card-home4-t1{
+        font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 29px;
+    text-align: center;
+    color: #A54C4C;
+    
+    }
+    .card-home2-item-t1{
+        font-size:10px;
+        text-align: center;
+        color:black;
+        font-weight: bold;
+    }
+    .card-home2-item-t2{
+        display:none;
+    }
+    .card-home2-margin{
+        margin:0px;
+    }
+    .card-home2-item{
+        width: 99px;
+        height: 120px;
+        margin:10px 10px;
+        background: #FFFFFF;
+        box-shadow: 1px 4px 8px rgba(18, 7, 7, 0.5);
+        border-radius: 5px;
+        
+    }
+    .card-home1-item{
+        width:60px;
+        height:60px;
+        overflow: hidden;
+        background: #FFFFFF;
+        box-shadow: 1px 4px 8px rgba(18, 7, 7, 0.5);
+        border-radius: 5px;
+        cursor: pointer;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-home1-item img{
+        opacity: 0.5;
+        width:25px;
+        height: 25px;
+        
+    }
+    .card-home1-st{
+        color: #025955;
+        font-weight: bold;
+        font-size:8px;
+       padding-top: 2px;
+       text-align: center;
+    }
+    .icon-company{
+        width:50px;
+        height:50px;
+    }
+    .head-m{
+        text-align: center;
+        font-size: 14px !important;
+    }
+    .head-sm{
+        text-align: center;
+        font-size: 8px !important;
+    }
+    .hide-m{
+        display:hide;
+    }
+}
