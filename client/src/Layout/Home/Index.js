@@ -130,7 +130,7 @@ function Index() {
                       <div class="u-align-left u-container-style u-layout-cell u-palette-5-dark-3 u-radius-30 u-right-cell u-shape-round u-size-60 u-layout-cell-6">
                         <div class="u-container-layout u-container-layout-6">
                           <h2 class="u-text u-text-1" style={{color:'white'}}> Kami menyediakan pelayanan commisioning , consultant engineering &amp; part service</h2>
-                          <a href="https://nicepage.com/k/dog-website-templates" class="u-border-2 u-border-hover-grey-90 u-border-white u-btn u-button-style u-hover-palette-1-dark-1 u-none u-text-hover-white u-btn-1">Chat us now</a>
+                          <a href="https://api.whatsapp.com/send?phone=6281260090018&lang=id" class="u-border-2 u-border-hover-grey-90 u-border-white u-btn u-button-style u-hover-palette-1-dark-1 u-none u-text-hover-white u-btn-1">Chat us now</a>
                         </div>
                       </div>
                     </div>

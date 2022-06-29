@@ -3,102 +3,70 @@ const brooksData = [
   {
     name: "Roller Chain Type Hollow",
     image: "RollerChain-Hollow.jpg",
-    file: "4in 20K hollow.pdf",
+    file: ["4in 20K hollow","4in26K-HP6P"],
     type: "chain",
     size: "4"
   },
   {
     name: "Roller Chain Type Extended",
     image: "RollerChain-Extended.jpg",
-    file: "6in 22K EP4P.pdf",
+    file: ["4in22K EP8P"],
     type: "chain",
     size: "6"
   },
   {
     name: "Roller Chain Type Solid",
     image: "RollerChain-Solid.jpg",
-    file: "6in 22K EP4P.pdf",
+    file: ["6in 22K EP4P.pdf"],
     type: "chain",
     size: "6"
   },
   {
     name: "Roller Chain Type Solid Hollow",
     image: "6in 22K EP4P-2.png",
-    file: "6in 22K EP4P.pdf",
+    file: ["6in 22K EP4P.pdf"],
     type: "chain",
     size: "6"
   },
   {
     name: "Sprocket",
     image: "101508.png",
-    file: "165512.pdf",
+    file: ["165512.pdf"],
     type: "sproket",
-    size: "10"
+    size: "10" 
   }
 ];
 
 function BrooksCategory() {
   const [page, setPage] = useState(1);
-  const itemPerPage = 15;
-  const [productList, setProductList] = useState([]);
-  const [sizeList, setSizeList] = useState([])
+  
+  const [products,setProducts] = useState([
+    {name:"Roller Chain Type Hollow",image: "RollerChain-Hollow.jpg", size:["4in 20K hollow","4in26K-HP6P","6in 20K hollow","6in40K EP8P"],type: "chain",selected:""},
+    {name: "Roller Chain Type Extended",image: "RollerChain-Extended.jpg",size: ["4in22K EP8P",'6in 22K EP4P','6in 65K EP6P','6in 80K EP'],type: "chain",selected:""},
+    {name: "Roller Chain Type Solid",image: "RollerChain-Solid.jpg",size: ["6in22K solid"],type: "chain",selected:""},
+    // {name: "Roller Chain Type Solid Hollow",image: "6in 22K EP4P-2.png",size: ["6in 22K EP4P.pdf"],type: "chain",selected:""},
+    {name: "Sprocket",image: "BrooksAndell.jpg",size: ["165512"],type: "sproket",selected:""}
+  ])
   const [typeProduct, selectTypeProduct] = useState();
   const [sizeProduct, setSizeProduct] = useState()
-  const updateList = () => {
-    var indexOfLastItem = page * itemPerPage;
-    var indexOfStartItem = indexOfLastItem - itemPerPage;
-    var currentItem = brooksData.slice(indexOfStartItem, indexOfLastItem);
-    setProductList(currentItem);
-  };
+  const  handleChangeCatalog = (e,index)=>{
+    console.log(e.target.value)
+    let value = e.target.value
+    setProducts(prevProducts=>{return prevProducts.map((product,idx)=>{
+      if(index === idx){     
+        return {...prevProducts[index],selected:value}
+      }else{
+        return product;
+      }
+    })})
+  }
+  
+  // Pagination 
+  const itemPerPage = 15;
   var totalPage = Math.ceil(brooksData.length / itemPerPage);
   var startPage = page;
   var endPage = startPage + 2;
-  const handleSearch = (e) => {
-    e.preventDefault()
-    if (!typeProduct) {
-      return;
-    }
-    if (!sizeProduct) {
-      const curData = brooksData.filter(({ type, size }) => type === typeProduct)
-      const newData = Array.from(curData)
-      setPage(1)
-      setProductList(newData)
-    } else {
-      const curData = brooksData.filter(({ type, size }) => type === typeProduct && size === sizeProduct)
-      const newData = Array.from(curData)
-
-      setProductList(newData)
-    }
-  }
-  const handleChangeType = (e) => {
-    e.preventDefault()
-    setSizeProduct('')
-    var value = e.target.value
-    var sizeArr = [];
-    selectTypeProduct(value)
-    var selectedProduct = brooksData.filter(item => item.type === value)
-    for (var i = 0; i < selectedProduct.length; i++) {
-      sizeArr.push(selectedProduct[i].size)
-    }
-    var updateSize = new Set(sizeArr)
-    var arr = Array.from(updateSize)
-    setSizeList(arr)
-
-  }
-  const handleChangeSize = (e) => {
-    var value = e.target.value
-    setSizeProduct(value)
-  }
-  if (page + 2 >= totalPage && totalPage >= 3) {
-    startPage = totalPage - 2;
-    endPage = totalPage;
-  } else if (totalPage < 3) {
-    startPage = 1;
-    endPage = totalPage;
-  } else {
-    startPage = page;
-    endPage = startPage + 2;
-  }
+  
   var pages = [...new Array(endPage + 1 - startPage).keys()].map(
     (i) => startPage + i
   );
@@ -123,9 +91,8 @@ function BrooksCategory() {
     e.preventDefault()
     setPage(item)
   }
-  useEffect(() => {
-    updateList();
-  }, [page]);
+  // end pagination
+
   return (
     <div className="col-lg-12 order-lg-2 productlist">
 
@@ -148,45 +115,14 @@ function BrooksCategory() {
           />
         </div>
       </div>
+      
       <div className="row">
-        <div className="col-lg-5 my-2">
-          <div className="form-group">
-
-            <select value={typeProduct} className="form-control" onChange={(e) => handleChangeType(e)}>
-              <option >Choose Product</option>
-              <option value="chain">Roller Chain</option>
-              <option value="sproket">Sproket</option>
-            </select>
-          </div>
-
-        </div>
-        {totalPage > 0 && <div className="col-lg-5 my-2">
-          <div className="form-group">
-            <select className="form-control" value={sizeProduct} onChange={(e) => handleChangeSize(e)} >
-              <option value=" ">Select size</option>
-              {sizeList.map(item => (
-                <option value={item}>{item}</option>
-              ))}
-            </select>
-          </div>
-        </div>}
-
-        <div className="col-lg-2 my-2">
-          <div className="form-group">
-
-            <div className="form-control-wrap">
-              <button className="btn" style={{ backgroundColor: "black", color: "#fff" }} onClick={(e) => handleSearch(e)}>Search</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        {productList.map((item) => (
+        {products.map((item,itemIndex) => {return(
           <div className="col-lg-3 col-md-6 col-sm-6">
             <div className="team__item">
               <a
                 href={
-                  process.env.PUBLIC_URL + `/Assets/ViewCatalog/${item.file}`
+                  process.env.PUBLIC_URL + `/Assets/ViewCatalog/${item.selected}`
                 }
                 target="_blank"
                 rel="noopener noreferrer"
@@ -203,27 +139,29 @@ function BrooksCategory() {
               <h5>{item.name}</h5>
               <div class="form-group">
                 <label for="exampleFormControlSelect1">Select size</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                <select class="form-control" id="exampleFormControlSelect1" onChange={(e)=>{handleChangeCatalog(e,itemIndex)}}>
+                  <option value="">Select Size</option>
+                  {item.size.map(itemC=>(
+                   
+                    <option value={itemC}>{itemC}</option>
+                  ))}
                 </select>
               </div>
-              <a
+              {item.selected?<a
                 href={
-                  process.env.PUBLIC_URL + `/Assets/ViewCatalog/${item.file}`
+                  process.env.PUBLIC_URL + `/Assets/ViewCatalog/${item.selected}.pdf`
                 }
+                
                 target="_blank"
                 rel="noopener noreferrer"
                 className="primary-btn normal-btn"
               >
                 View Catalog
-              </a>
+              </a>:""}
+              
             </div>
           </div>
-        ))}
+        )})}
 
       </div>
       {brooksData.length >= itemPerPage && (

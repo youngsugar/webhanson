@@ -25,36 +25,8 @@ function ProductDetailLayout() {
         <section className="productcategory">
             
             <div className="container">
-                <div className="row" style={{marginBottom:"20px"}}>
-                
-                   <RouterProduct/>
-                
-                    {/* <Formik
-                        initialValues={initialValues}
-                        validationSchema={validatioSchema}
-                    >
-                        {formik=>{return(
-                    <div className="col-lg-3 order-lg-1">
-                        
-                        <div className="services__appoinment">
-                            <div className="services__title" style={{ marginBottom: '20px' }}>
-                                <h5><img src="img/icons/services-icon.png" alt="" /> Download Our Catalog</h5>
-                            </div>
-                            
-                            <div className="formse">
-                                <Field type="text" name="name" placeholder="Name" />
-                                <Field type="email"  name="email" placeholder="Email" />
-                                <Field type="number"  name="phone"  placeholder="Phone Number/Whatsapp"/>
-                                <button className="site-btn" disabled={!formik.isValid || formik.isSubmitting || !formik.dirty} onClick={(e)=>handleDownload(e)}>Download</button>
-                                </div>
-                                
-                        </div>
-
-                        
-                    </div>
-                    )}}
-                    </Formik> */}
-                    
+                <div className="row" style={{marginBottom:"20px"}}>            
+                    <RouterProduct/>
                 </div>
             </div>
             

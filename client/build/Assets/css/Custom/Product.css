@@ -849,7 +849,13 @@
   .u-section-5 .u-sheet-1 {
     min-height: 452px;
   }
-
+  .u-section-5 .u-text-1{
+    margin:0px;
+  }
+  .u-section-3 .u-text-1 {
+    font-weight: 700;
+    margin: 0px 0 0;
+}
   .u-section-5 .u-text-1 {
     font-size: 1.875rem;
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 const listProduct = [
     { name: 'KDV 23h', image: 'KDV.jpg',file:'KD-series.pdf' },
-    { name: 'KDV 82', image: 'KDV.jpg',file:'KD-series.pdf' },
+    { name: 'KDV 82h', image: 'kdv82h.png',file:'KD-series.pdf' },
 ]
 function CheonseiCategory() {
     return (
